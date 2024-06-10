@@ -112,23 +112,33 @@ nav {
 		<nav>
 			<div class="navbar-container">
 				<div class="logo">
-					<img src="All_Component/Images/logo0.png" alt="Logo"> <span>Pharmacy</span>
+					<img src="All_Component/Images/logo0.png" alt="Logo"> <span>MedWorld</span>
 				</div>
 				<div class="navbar-links">
-					<a href="#">Products</a> <a href="#">About Us</a> <a href="#">Contact</a>
+					<a href="index.jsp">Home</a> <a href="AboutUs.jsp">About
+						Us</a> 
 				</div>
-				<div class="search-bar">
-					<input type="text" placeholder="Search">
-					<button type="button">Search</button>
+				<div class="col-md-6 ">
+					<form class="form-inline my-2 my-lg-0" action="search.jsp"
+						method="post">
+						<input class="form-control mr-sm-2 " type="search" name="ch"
+							placeholder="Search" aria-label="Search">
+						<button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+					</form>
+
 				</div>
+
 				<div class="user-actions">
 					<c:if test="${not empty userobj}">
-						<a href="checkout.jsp">${userobj.name }</a>
+						<i class="fa-solid text-white fa-user"></i>
+						<a href="setting.jsp">${userobj.name }</a>
+						<i class="fa-solid  text-white fa-right-from-bracket"></i>
 						<a href="logout">Logout</a>
-						<a href="setting.jsp"style="height:40px; "> <i class="fa-solid  fa-gear "></i> 
+						<a href="setting.jsp" style="height: 40px;"> <i
+							class="fa-solid  fa-gear "></i>
 						</a>
 					</c:if>
-					
+
 					<c:if test="${empty userobj}">
 						<a href="login.jsp">Login</a>
 						<a href="register.jsp">Register</a>

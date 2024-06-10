@@ -46,8 +46,8 @@ public class OrderServlet extends HttpServlet {
 			List<product_cart> plist = dao.getProductByUser(id);
 
 			if (plist.isEmpty()) {
-				session.setAttribute("failedMsg", "Please Add Book ");
-				resp.sendRedirect("checkout.jsp");
+				session.setAttribute("failedMsg", "Please Add Product ");
+				resp.sendRedirect("Cart.jsp");
 
 			} else {
 
@@ -58,7 +58,7 @@ public class OrderServlet extends HttpServlet {
 
 				for (product_cart c : plist) {
 
-					o.setOrderId("BOOK-ORD-00" + i);
+					o.setOrderId("P-00" + i);
 					o.setUserName(name);
 					o.setEmail(email);
 					o.setPhone(phone);
@@ -87,7 +87,7 @@ public class OrderServlet extends HttpServlet {
 						}
 					} else {
 						session.setAttribute("failedMsg", "Something went wrong ");
-						resp.sendRedirect("checkout.jsp");
+						resp.sendRedirect("Cart.jsp");
 					}
 				}
 			}

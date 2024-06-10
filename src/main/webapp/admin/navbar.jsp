@@ -9,7 +9,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Navbar</title>
 <style>
-/* Add your custom CSS here */
+/* Custom button styles */
+.custom-btn {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Adjust border-radius for different button shapes */
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.custom-btn-secondary {
+    background-color: #3498db; /* Blue color */
+    color: #fff; /* Button text color */
+}
+
+.custom-btn-primary {
+    background-color: #e74c3c; /* Red color */
+}
+
+.custom-btn:hover {
+    opacity: 0.8;
+}
+
 .text-gray-50 {
 	color: black; /* Change text color to black */
 }
@@ -23,12 +46,7 @@
 		<nav class="bg-green-300  ">
 			<div class="container mx-auto py-2 flex justify-between items-center">
 				<div class="flex flex-col items-center">
-					<div>
-						<a class="text-3xl font-bold font-heading" href="#"> <img
-							src="../../All_Component/Images/logo0.png"
-							style="height: 60px; width: 70px;" class="h-8">
-						</a>
-					</div>
+					
 					<div>
 						<span class="ml-2 text-ml font-bold font-heading"
 							style="background-image: linear-gradient(to right, blue, black); -webkit-background-clip: text; color: transparent;">Medworld</span>
@@ -38,29 +56,29 @@
 				</div>
 
 				<div>
-					<a href="home.jsp"> <span class="text-gray-50 text-bold">HOME</span>
+					<a href="home.jsp"> <span
+						class="text-gray-50 pl-5 pr-5 text-bold">HOME</span></a> <a
+						href="add_product.jsp"> <span
+						class="text-gray-50 pl-5 pr-5 text-bold">ADD PRODUCT</span></a> <a
+						href="manage_order.jsp"> <span
+						class="text-gray-50 pl-5 pr-5 text-bold">ORDERS</span></a> <a
+						href="manage_product.jsp"> <span
+						class="text-gray-50 pl-5 pr-5 text-bold">PRODUCTS</span></a> <a
+						href="manage_user.jsp"> <span
+						class="text-gray-50 pl-5 pr-5 text-bold">USERS</span></a>
 
-					</a>
-
-				</div>
-
-				<div
-					class="lg:flex hidden items-center space-x-2 bg-white py-1 px-2 rounded-full">
 
 
-					<svg xmlns="http://www.w3.org/2000/svg"
-						class="h-6 w-6 text-gray-600 cursor-pointer" fill="none"
-						viewBox="0 0 24 24" stroke="currentColor">  
-              <path stroke-linecap="round" stroke-linejoin="round"
-							stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /> 
-            </svg>
-					<input class="outline-none " type="text" placeholder="Search" />
+
 
 				</div>
+
+
 
 				<div class="col-span-2">
 					<c:if test="${not empty userobj}">
-						<a href="login.jsp" class="btn text-white ml-64 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 text-white"><i
+						<a href="login.jsp"
+							class="btn text-white ml-64 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 text-white"><i
 							class="fa-solid fa-user"></i> ${userobj.name}</a>
 						<a href="../logout" data-toggle="modal"
 							data-target="#exampleModal" class="btn btn-dark"><i
@@ -94,14 +112,13 @@
 								<div class="text-center">
 									<h5>Do you want to logout..?</h5>
 									<br> <br>
-									<button type="button" class="btn btn-secondary"
+									<button type="button" class="custom-btn custom-btn-secondary"
 										data-dismiss="modal">Close</button>
 									<a href="../../logout" type="button"
-										class="btn btn-primary text-white">Logout</a>
-
+										class="custom-btn custom-btn-primary text-white">Logout</a>
 								</div>
-
 							</div>
+
 							<div class="modal-footer"></div>
 						</div>
 					</div>

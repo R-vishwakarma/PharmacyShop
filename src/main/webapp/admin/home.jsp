@@ -11,10 +11,6 @@
 </head>
 <body>
   <%@include file="navbar.jsp"%>
- 
- 
- 
- <!-- privacy -->
  <c:if test="${empty userobj }">
 		<c:redirect url="../login.jsp">
 

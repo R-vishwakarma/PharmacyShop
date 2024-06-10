@@ -49,7 +49,7 @@
 				<tr>
 					<td class="px-4 py-2 border border-gray-400"><%=b.getProduct_id()%></td>
 					<td class="px-4 py-2 border border-gray-400"><img
-						src="../product/<%=b.getPhoto()%>"
+						src="../../All_Component/Images/<%=b.getPhoto()%>"
 						style="width: 50px; height: 50px;"></td>
 					<td class="px-4 py-2 border border-gray-400"><%=b.getProduct_name()%></td>
 					<td class="px-4 py-2 border border-gray-400"><%=b.getCategory()%></td>

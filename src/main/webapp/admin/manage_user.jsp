@@ -51,10 +51,9 @@
 					<td class="px-4 py-2 border border-gray-400"><%=u.getEmail()%></td>
 					<td class="px-4 py-2 border border-gray-400"><%=u.getPhone()%></td>
 					<td class="px-4 py-2 border border-gray-400"><%=u.getPassword()%></td>
-					<td> <a
-					href="../../deleteuser?id=<%=u.getId()%>"
-					class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i>
-						Delete</a></td>
+					<td><a href="../../deleteuser?id=<%=u.getId()%>"
+						class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i>
+							Delete</a></td>
 				</tr>
 				<%
 				}

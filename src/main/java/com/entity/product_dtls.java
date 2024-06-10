@@ -9,7 +9,7 @@ public class product_dtls {
 	private String price;
 	public product_dtls() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 	public product_dtls(String product_name, String category, String brand_name, String photo, String price) {
 		super();

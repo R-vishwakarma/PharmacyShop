@@ -28,4 +28,6 @@ public List<product_dtls> getAllpersonalcareprodcts();
 public List<product_dtls> getAllskincareprodcts();
 
 public List<product_dtls> getAllfitnesscareprodcts();
+
+public List<product_dtls> getProductBySearch(String ch);
 }

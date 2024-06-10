@@ -7,12 +7,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>Contact Form Template</title>
+<title>login</title>
 <link rel="stylesheet" href="/build/tailwind.css" type="text/css"
 	media="screen" title="no title" charset="utf-8" />
 </head>
 <body>
-<%@include file="All_Component/allcss.jsp"%>
+	<%@include file="All_Component/allcss.jsp"%>
 	<%@include file="All_Component/navbar.jsp"%>
 	<div class="lg:flex">
 		<div class="lg:w-1/2 xl:max-w-screen-sm">
@@ -54,19 +54,17 @@
 								Address</div>
 							<input
 								class="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500"
-								type="" placeholder="mike@gmail.com" name="email">
+								type="email" placeholder="example@gmail.com" name="email">
 						</div>
 						<div class="mt-8">
 							<div class="flex justify-between items-center">
 								<div class="text-sm font-bold text-black-700 tracking-wide">
 									Password</div>
-								<div>
-									<a
-										class="text-xs font-display font-semibold text-indigo-600 hover:text-indigo-800
-                                        cursor-pointer">
-										Forgot Password? </a>
-								</div>
+								
 							</div>
+							
+							
+							
 							<input
 								class="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500"
 								type="" placeholder="Enter your password" name="password">
@@ -78,6 +76,15 @@
                                 shadow-lg">
 								Log In</button>
 						</div>
+					</form>
+					<form action="forgotPassword" method="post">
+					<div>
+									<a href="forgotPassword.jsp"
+										class="text-xs font-display font-semibold text-indigo-600 hover:text-indigo-800
+                                        cursor-pointer">
+										Forgot Password? </a>
+								</div>
+					
 					</form>
 					<div
 						class="mb-5 text-sm font-display font-semibold text-gray-700 text-center">

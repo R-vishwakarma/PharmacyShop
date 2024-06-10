@@ -1,8 +1,26 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>footer</title>
+
+<style>
+footer {
+
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
 
 
-<footer class=" bg-blue-300 ">
-  <div class="container mx-auto  px-4">
+</style>
+</head>
+<body>
+
+
+<footer class=" bg-blue-300  ">
+  <div class="container mx-auto bottom-0 px-4">
     <div class="flex flex-wrap text-left lg:text-left text-black"> <!-- Set text color to black -->
       <div class="w-full lg:w-6/12 mt-5 px-4">
         <h4 class="text-3xl font-semibold">Let's keep in touch!</h4>
@@ -68,3 +86,7 @@
     </div>
   </div>
 </footer>
+
+
+</body>
+</html>
